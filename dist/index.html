@@ -16,7 +16,7 @@
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "../three.module.js"
+					"three": "./three.module.js"
 				}
 			}
 		</script>
@@ -45,7 +45,7 @@
 				scene = new THREE.Scene();
 
 				new RGBELoader()
-					.setPath( 'textures/hdri/' )
+					
 					.load( 'studio_country_hall_1k.hdr', function ( texture ) {
 
 						texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -57,7 +57,7 @@
 
 						// model
 
-						const loader = new GLTFLoader().setPath( 'gltf/' );
+						const loader = new GLTFLoader().setPath( './' );
 						loader.load( 'monkey.gltf', function ( gltf ) {
 
 							scene.add( gltf.scene );
